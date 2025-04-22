@@ -1,0 +1,236 @@
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; 
+}
+/* Header Style Starts*/
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 100px;
+    font-size: 1.3em;
+    background-color:#EFEEEA;
+    color:#6e81b7;
+    position: fixed;
+    z-index: 999;
+}
+.text-btn{
+    text-decoration: none;
+    color: #6e81b7;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 0 15px;
+    transition: all 0.3s ;
+}
+.text-btn:hover{
+    font-size: 1.3em;
+    color: #8aa2e5;
+}/* Header Style Ends*/
+
+/* Landing Page Style Ends*/
+.landing-page{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.1em;
+    background-color:#273F4F;
+    height: 45em;
+    padding: 15px 100px;
+    border-radius: 0 0 80px 80px;
+}
+.landing-page .text{
+    margin-top: 100px;
+}
+.landing-page .text p{
+    color: #fff;
+    font-size: 1.8em;
+    margin-bottom: 40px;
+}
+.job{
+    color: #8aa2e5;
+    font-size: 3em;
+    font-weight: 600;
+}
+.main-btn{
+    text-decoration: none;
+    background-color: #6071a0;
+    color: #FFF;
+    padding: 20px 30px;
+    border-radius: 15px;
+    font-size: 1.2em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.5s ease;
+    display: inline-block;
+}
+.landing-page .text a:hover{
+    background-color: #7c91ce;
+    transform: scale(1.1);
+}
+.cover{
+    width: 500px;
+    margin-top: 100px;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    border-radius: 20px;
+    box-shadow:0 0 10px 3px #7E99A3;
+}
+.landing-page .text .social-icon{
+    margin:30px 0 0 70px;
+}
+.social-icon a{
+    color: #fff;
+    font-size: 2em;
+    text-align: center;
+    padding-right: 20px;
+}
+.landing-page .text .social-icon a:hover {
+    background-color: #273F4F;
+}/* Landing Page Style Ends*/
+
+/* Projects/Contact Style Starts*/
+.projects,
+.contacts{
+    margin: 150px 0;
+}
+h2{
+    font-size: 3.4em;
+    text-align: center;
+    color:  #6071a0;
+    margin-bottom: 1.2em;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 1.2em;
+}
+.content .cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #8aa2e5;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 15px;
+    width: 20em;
+    box-shadow:5px 5px 10px 0px #7E99A3;
+    transition: all 0.5s ease;
+}
+.content .cards:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.content .cards .icon{
+    font-size: 5em;
+    color: #273F4F;
+}
+.content .cards h4{
+    font-size: 1.1em;
+    padding: 10px;
+    color: #273F4F;
+}/* Projects/Contact Style Ends*/
+
+/* About me Style Starts*/
+.about{
+    background-color: #273F4F;
+    border-radius: 80px;
+    padding: 45px 100px;
+    font-size: 1.5em;
+}
+.about h2{
+    color: #8aa2e5;
+}
+.about p{
+    color: #FFF;
+    line-height: 2.2em;
+}
+.about p strong{
+    font-weight: 900;
+}/* About me Style Ends*/
+
+/* Footer Style Starts*/
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #273F4F;
+    border-radius: 100px 100px 0 0;
+    padding: 25px 100px;
+    color: #FFF;
+    font-size: 1.2em;
+}
+footer span{
+    color: #8aa2e5;
+    font-weight: 700;
+}/* Footer Style Ends*/
+
+
+/* Responsive Style Starts*/
+@media(max-width:1023px){
+    body{
+        font-size: 14px;
+    }
+    header{
+        padding: 10px 40px;
+    }
+    h1,
+    h2,
+    .job{
+        font-size: 1.3em;
+    }
+    .text-btn{
+        font-size: 1em;
+        padding: 0 10px;
+    }
+    .landing-page,
+    .content,
+    .about,
+    footer{
+        padding: 15px 40px;
+        font-size: 1.2em;
+    }
+    .cover{
+        width: 50vw;
+    }
+    .main-btn{
+        padding: 15px 40px;
+        font-size: 1.2em;
+    }
+}
+@media(max-width:530px){
+    body{
+        font-size: 12px;
+    }
+    .main-btn{
+        padding: 10px 10px;
+        font-size: 1.2em;
+    }
+    .cover{
+        width: 40vw;
+    }
+}
+@media(max-width:405px){
+    body{
+        font-size: 10px;
+    }
+    .main-btn{
+        padding: 5px 5px;
+        font-size: 1.1em;
+    }
+    .cover{
+        width: 35vw;
+    }
+    .landing-page .text .social-icon{
+        margin:30px 0 0 30px;
+    }
+    .social-icon a{
+        font-size: 2em;
+    }
+}
+/* Responsive Style Ends*/

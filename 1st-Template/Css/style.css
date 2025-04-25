@@ -2,6 +2,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+
 :root{
     --main-color:#10cab7;
     --padding: 80px 0;
@@ -10,7 +11,8 @@ body{
     font-family: "Work Sans", sans-serif;
 }
 .container{
-    padding: 20px;
+    padding: 0 20px;
+    margin: 0 auto;
 }
 
 /* Header Style Starts */
@@ -224,7 +226,7 @@ p{
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    padding: 40px 60px;
+    padding-top: 60px;
 }
 .portfolio .portfolio-cards .card{
     width: 350px;
@@ -347,7 +349,16 @@ footer p span{
 /* Footer Style Ends */
 
 /* Tablets and smaller laptops */
+@media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+
 @media (max-width: 991px) {
+    header .container{
+        margin: 0 30px;
+    }
     .landing-page .landing-page-text {
       width: 70vw;
       font-size: 1.1em;
@@ -367,6 +378,9 @@ footer p span{
   
   /* Phones */
   @media (max-width: 767px) {
+    header .container{
+        margin: 0 30px;
+    }
     .landing-page .landing-page-text {
       width: 90vw;
       font-size: 1em;

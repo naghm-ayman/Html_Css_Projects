@@ -18,6 +18,11 @@ header{
     position: fixed;
     z-index: 999;
 }
+header nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
 .text-btn{
     text-decoration: none;
     color: #6e81b7;
@@ -73,6 +78,7 @@ header{
 }
 .cover{
     width: 500px;
+    max-width: 100%;
     margin-top: 100px;
     object-fit: cover;
     aspect-ratio: 1/1;
@@ -177,7 +183,7 @@ footer span{
         font-size: 14px;
     }
     header{
-        padding: 10px 40px;
+        padding: 10px;
     }
     h1,
     h2,
@@ -193,44 +199,24 @@ footer span{
     .about,
     footer{
         padding: 15px 40px;
-        font-size: 1.2em;
-    }
-    .cover{
-        width: 50vw;
-    }
-    .main-btn{
-        padding: 15px 40px;
-        font-size: 1.2em;
     }
 }
-@media(max-width:530px){
-    body{
-        font-size: 12px;
+@media(max-width: 768px){
+    header{
+    font-size: 1em;
     }
-    .main-btn{
-        padding: 10px 10px;
-        font-size: 1.2em;
-    }
-    .cover{
-        width: 40vw;
+    header .text-btn {
+        padding: 0 5px;
+        font-size: 0.8em;
     }
 }
-@media(max-width:405px){
-    body{
-        font-size: 10px;
-    }
-    .main-btn{
-        padding: 5px 5px;
-        font-size: 1.1em;
-    }
+@media(max-width: 992px){
     .cover{
-        width: 35vw;
-    }
-    .landing-page .text .social-icon{
-        margin:30px 0 0 30px;
-    }
-    .social-icon a{
-        font-size: 2em;
-    }
+    display: none;
 }
+    .landing-page .text{
+        text-align: center;
+}
+}
+
 /* Responsive Style Ends*/

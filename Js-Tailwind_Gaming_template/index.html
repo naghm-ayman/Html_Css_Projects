@@ -1,0 +1,237 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/style..css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">         
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <style type="text/tailwindcss">
+            @theme {
+                --color-main: #FF9800;
+            }
+        </style>
+    </head>
+    <body class="bebas-neue-regular bg-black scroll-smooth">
+        <!-- NavBar Starts -->
+        <nav class="flex justify-around items-center p-6 absolute top-0 right-0 left-0 min-h-[128px] z-[999] text-white">
+            <div class="logo font-extrabold text-4xl">GAME IT</div>
+            <!-- nav links -->
+            <ul class="links list-none text-xl max-md:absolute max-md:top-[90px]  
+                        max-md:bg-black max-md:p-2 max-md:w-[450px] max-md:hidden">
+                <li class="px-4 max-md:my-3 text-main inline-block max-md:block"><a href="#" class="hover:opacity-80 focus:outline-none">Home</a></li>
+                <li class="px-4 max-md:my-3 inline-block max-md:block"><a href="#about" data-section=".about" class="hover:text-main hover:opacity-80 focus:outline-none">About</a></li>
+                <li class="px-4 max-md:my-3 inline-block max-md:block"><a href="#games" data-section=".games" class="hover:text-main hover:opacity-80 focus:outline-none">Games</a></li>
+                <li class="px-4 max-md:my-3 inline-block max-md:block"><a href="#stream" data-section=".stream" class="hover:text-main hover:opacity-80 focus:outline-none">Streaming</a></li>
+                <li class="px-4 max-md:my-3 inline-block max-md:block"><a href="#contact" data-section=".contact" class="hover:text-main hover:opacity-80 focus:outline-none">Contact Us</a></li>
+            </ul>
+            <!-- toggle button (hamburger) -->
+            <div class="toggle-bars relative block md:hidden before:content-[''] before:border-solid before:border-[10px] before:border-transparent before:border-b-black before:absolute before:-bottom-[15px] before:left-[5px] before:max-md:hidden ">
+                <i class="fa-solid fa-bars text-white text-2xl cursor-pointer "></i>
+            </div>
+        </nav>
+        <!-- NavBar Ends -->
+        <!-- SettingsBox Starts -->
+        <div class="settingsbox fixed  h-full w-52 bg-stone-950 z-[100] left-[-210px] top-0 max-sm:hidden">
+            <div class="gearbox absolute p-2 rounded-r-md bg-stone-950 text-white left-full top-3/4 cursor-pointer">
+                <i class="fa-solid fa-gear text-xl py-1"></i>
+            </div>
+            <div class="setting-container px-5 py-8 text-lg">
+                <div class="color-option text-white rounded-md text-center p-2 bg-slate-600 mb-3" >
+                    <h5>Choose Your Color</h5>
+                    <ul class="color-list list-none flex justify-center py-2">
+                        <li class="active cursor-pointer px-1 mx-1 w-5 h-5 rounded-md bg-[#FF9800]" data-color="#FF9800"></li>
+                        <li class="cursor-pointer px-1 mx-1 w-5 h-5 rounded-md bg-[#673ab7]" data-color="#673ab7"></li>
+                        <li class="cursor-pointer px-1 mx-1 w-5 h-5 rounded-md bg-[#4caf50]" data-color="#4caf50"></li>
+                        <li class="cursor-pointer px-1 mx-1 w-5 h-5 rounded-md bg-[#2196f3]" data-color="#2196f3"></li>
+                        <li class="cursor-pointer px-1 mx-1 w-5 h-5 rounded-md bg-[#d32f2f]" data-color="#d32f2f"></li>
+                    </ul>
+                </div>
+                <div class="background-option text-white rounded-md text-center p-2 bg-slate-600 my-3" >
+                    <h5>Random Background?</h5>
+                    <div class="btnbox-option text-center text-white">
+                        <button class="Yes active cursor-pointer px-2 bg-main rounded-md hover:opacity-70 my-3 mx-1" data-background="yes">Yes</button>
+                        <button class="No cursor-pointer px-2 bg-main rounded-md hover:opacity-70 mx-1" data-background="no">No</button>
+                    </div>
+                </div>
+                <div class="bullets-option text-white rounded-md text-center p-2 bg-slate-600 my-3" >
+                    <h5>Bullets Option</h5>
+                    <div class="btnbox-option flex justify-center text-white">
+                        <button class="show active cursor-pointer px-2 bg-main rounded-md hover:opacity-70 m-2" data-display="block">Show</button>
+                        <button class="none cursor-pointer px-2 bg-main rounded-md hover:opacity-70 m-2" data-display="none">None</button>
+                    </div>
+
+                </div>
+                <button class="reset cursor-pointer w-full p-2 text-white text-center text-2xl font-extrabold bg-red-700 rounded-md hover:opacity-70 my-3">Reset Options</button>
+
+            </div>
+        </div>
+        <!-- SettingsBox Ends -->
+
+        <!-- NavBullets Starts -->
+        <div class="nav-bullets fixed right-0 top-1/2 -translate-y-1/2 w-10 z-[1001]">
+            <div class="bullet" data-section=".about">
+                <div class="tool-tip absolute w-28 p-2 -top-3 right-8 bg-main text-white text-center rounded-sm hidden cursor-default pointer-events-none tracking-wider text-lg">About-us</div>
+            </div>
+            <div class="bullet" data-section=".games">
+                <div class="tool-tip absolute w-28 p-2 -top-3 right-8 bg-main text-white text-center rounded-sm hidden cursor-default pointer-events-none tracking-wider text-lg">Games</div>
+            </div>
+            <div class="bullet" data-section=".stream">
+                <div class="tool-tip absolute w-28 p-2 -top-3 right-8 bg-main text-white text-center rounded-sm hidden cursor-default pointer-events-none tracking-wider text-lg">Streaming</div>
+            </div>
+            <div class="bullet" data-section=".contact">
+                <div class="tool-tip absolute w-28 p-2 -top-3 right-8 bg-main text-white text-center rounded-sm hidden cursor-default pointer-events-none tracking-wider text-lg">Contact-us</div>
+            </div>
+        </div>
+        <!-- NavBullets Ends -->
+        <!-- LandingPage Starts -->
+        <div class="landing min-h-[100vh] relative bg-[url(../images/1.jpg)] bg-cover">
+            <div class="overlay absolute top-0 right-0 w-[100%] h-[100%] bg-black opacity-40 z-1"></div>
+            <div class="landingbox absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
+                <div class="textbox text-center text-white  min-w-[360px]">
+                    <h1 class="text-7xl max-sm:text-4xl">Lets <span class="text-main">"GAME IT"</span></h1>
+                    <p class="text-xl max-sm:text-sm">Game it till you make it.</p>
+                </div>
+                <div class="btnbox text-center mt-14 text-white text-2xl  max-sm:text-lg max-sm:mt-6">
+                    <button class="login cursor-pointer px-5 py-3 border-2 rounded-md hover:opacity-70 mr-5 my-3">Login</button>
+                    <button class="signup cursor-pointer px-5 py-3 bg-main border-2 rounded-md hover:opacity-70">Sign Up</button>
+                </div>
+            </div>
+        </div>
+        <!-- LandingPage Ends -->
+        <!-- About Us Starts -->
+        <div class="about container py-10 flex justify-around items-center flex-col md:flex-row">
+            <div class="text-box max-w-lg max-md:text-center  ">
+                <h3 class="text-main text-5xl mb-4" >About Us</h3>
+                <p class="text-white text-xl/7 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis autem vel eaque ab accusamus sapiente officiis sunt ratione reprehenderit? Aspernatur amet eum esse rerum est sequi odio laborum saepe provident?</p>
+            </div>
+            <div class="img-container">
+                <img class="w-96 floating max-md:mt-14" src="images/about2.jpg" alt="">
+            </div> 
+        </div>
+        <!-- About Us Ends -->
+        <!-- Trending Products Starts -->
+        <div class="products bg-white px-4 py-12 sm:px-8 sm:py-16 lg:px-20 lg:py-36">
+            <div class="container w-full max-w-5xl mx-auto bg-black rounded-3xl p-4 sm:p-8 text-main">
+                <!-- Title -->
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl my-6 text-center font-extrabold">
+                Our Trending Products
+                </h2>
+                <!-- Products list -->
+                <div class="products-box space-y-4 sm:space-y-6 text-lg sm:text-xl">
+                    <!-- Product Item -->
+                    <div class="product-box p-2 flex items-center gap-x-2 max-md:block">
+                        <p class="w-36 shrink-0 font-bold max-md:w-full max-md:text-center">Fortnite</p>
+                        <div class="product-sells flex-1 h-8 sm:h-10 border-[3px] border-main rounded-lg relative overflow-hidden">
+                        <span data-sells="85%" class="absolute left-0 top-0 bg-main w-0 h-full transition-all duration-1000 ease-in-out"></span>
+                        </div>
+                    </div>
+                    <div class="product-box p-2 flex items-center gap-x-2 max-md:block">
+                        <p class="w-36 shrink-0 font-bold max-md:w-full max-md:text-center">ROBLOX</p>
+                        <div class="product-sells flex-1 h-8 sm:h-10 border-[3px] border-main rounded-lg relative overflow-hidden">
+                        <span data-sells="70%" class="absolute left-0 top-0 bg-main w-0 h-full transition-all duration-1000 ease-in-out"></span>
+                        </div>
+                    </div>
+                    <div class="product-box p-2 flex items-center gap-x-2 max-md:block">
+                        <p class="w-36 shrink-0 font-bold max-md:w-full max-md:text-center">Minecraft</p>
+                        <div class="product-sells flex-1 h-8 sm:h-10 border-[3px] border-main rounded-lg relative overflow-hidden">
+                        <span data-sells="55%" class="absolute left-0 top-0 bg-main w-0 h-full transition-all duration-1000 ease-in-out"></span>
+                        </div>
+                    </div>
+                    <div class="product-box p-2 flex items-center gap-x-2 max-md:block">
+                        <p class="w-36 shrink-0 font-bold max-md:w-full max-md:text-center">Call of Duty</p>
+                        <div class="product-sells flex-1 h-8 sm:h-10 border-[3px] border-main rounded-lg relative overflow-hidden">
+                        <span data-sells="68%" class="absolute left-0 top-0 bg-main w-0 h-full transition-all duration-1000 ease-in-out"></span>
+                        </div>
+                    </div>
+                    <div class="product-box p-2 flex items-center gap-x-2 max-md:block">
+                        <p class="w-36 shrink-0 font-bold max-md:w-full max-md:text-center">League of Legends</p>
+                        <div class="product-sells flex-1 h-8 sm:h-10 border-[3px] border-main rounded-lg relative overflow-hidden">
+                        <span data-sells="45%" class="absolute left-0 top-0 bg-main w-0 h-full transition-all duration-1000 ease-in-out"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trending Products Ends -->
+
+        <!-- Our Games Starts -->
+        <div class="stream relative bg-white p-6 sm:p-10 before:content-[''] before:absolute before:top-0 before:left-0 before:w-1/2 before:h-full before:bg-main before:z-0">
+            <div class="container relative rounded-3xl p-4 sm:p-6 z-10">
+                
+                <!-- Title -->
+                <h2 class="text-3xl sm:text-5xl my-4 text-center leading-tight">
+                How To Start Your 
+                <span class="text-main drop-shadow-md">Live Stream</span>
+                </h2>
+
+                <!-- Cards -->
+                <div class="cards flex flex-col md:grid md:grid-cols-2 xl:grid-cols-3 gap-6 mt-12 sm:mt-16 text-center text-white">
+                    <!-- Card 1 -->
+                    <div class="card bg-black border-[4px] border-main rounded-lg p-6">
+                        <div class="bg-white p-2 w-12 h-12 flex items-center justify-center rounded-full m-auto">
+                        <i class="fa-solid fa-user fa-beat-fade text-black text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl my-4 text-center text-main relative before:content-['1'] before:absolute before:bottom-[-40px] before:left-0 before:text-[5rem] sm:before:text-[7rem] before:text-main/10">
+                        Go To Your Profile
+                        </h3>
+                        <p class="leading-7 text-sm sm:text-base">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa dolor omnis doloremque animi.
+                        </p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="card bg-black border-[4px] border-main rounded-lg p-6">
+                        <div class="bg-white p-2 w-12 h-12 flex items-center justify-center rounded-full m-auto">
+                        <i class="fa-solid fa-play fa-beat-fade text-black text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl my-4 text-center text-main relative before:content-['2'] before:absolute before:bottom-[-40px] before:left-0 before:text-[5rem] sm:before:text-[7rem] before:text-main/10">
+                        Live Stream Button
+                        </h3>
+                        <p class="leading-7 text-sm sm:text-base">
+                        Dolor sit amet consectetur adipisicing elit. Ipsa dolor omnis doloremque animi.
+                        </p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="card bg-black border-[4px] border-main rounded-lg p-6">
+                        <div class="bg-white p-2 w-12 h-12 flex items-center justify-center rounded-full m-auto">
+                        <i class="fa-solid fa-video fa-beat text-black text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl my-4 text-center text-main relative before:content-['3'] before:absolute before:bottom-[-40px] before:left-0 before:text-[5rem] sm:before:text-[7rem] before:text-main/10">
+                        You Are Live Now
+                        </h3>
+                        <p class="leading-7 text-sm sm:text-base">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa dolor omnis doloremque animi.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Live Stream Ends -->
+
+        <!-- Contact Us Starts -->
+        <div class="contact py-20">
+            <div class="container text-white flex flex-col md:flex-row items-center justify-around gap-12">
+                <img class="w-72 sm:w-96 rounded-lg floating sm:mt-20" src="images/about.jpg" alt="">
+                <form class="flex flex-col flex-1 w-full" action="">
+                    <h3 class=" text-5xl my-4 text-center text-main">Drop us a line</h3>
+                    <input class="border-[1px] rounded-lg p-3 my-3" type="text" placeholder="Username">
+                    <input class="border-[1px] rounded-lg p-3 my-3" type="email" placeholder="type Your Email">
+                    <textarea class="border-[1px] rounded-lg p-3 my-3" name="message" placeholder="Your Message"></textarea>
+                    <input class ="bg-main cursor-pointer px-5 py-3 text-lg rounded-md hover:opacity-90 my-3" type="button" value="submit">
+                </form>
+            </div>
+        </div>
+        <!-- Contact Us Ends -->
+
+        <!-- Footer Starts -->
+        <footer>
+            <div class="footer bg-main text-white text-center p-4">@Copyrights reserved: Naghm Ayman Omar</div>
+        </footer>
+        <!-- Footer Ends -->
+        <script src="js/javascript.js"></script>
+    </body>
+</html>
